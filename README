@@ -1,1 +1,11 @@
-moving to it's own repo
+Playground for Android view generation.
+
+The idea is that it would create xml files based upon the class names. Through a rake task it would generate the xml files for each view and place them in the directory.
+
+VERY VERY rough.  Still trying to get the DSL right, then will go back and cleanup the code itself.  
+
+At the moment, run both the main.rb and views.rb to see the results printed to STDOUT.  
+
+Feedback welcome:  joe@edgecase.com
+
+

@@ -1,21 +1,22 @@
-require 'droid_views'
+require '../droid_views'
 
+class Main < DroidView
 
-ll = LinearLayout.new do |layout|
-  layout.orientation   = 'vertical'
-  layout.layout_width  = 'fill_parent'
-  layout.layout_height = 'fill_parent'
-  
-  tv = TextView.new do |view|
-    view.layout_width = 'fill_parent'
-    view.layout_height = 'fill_parent'
-    view.text = 'Hello World'
+  linear_layout do |ll|
+    ll.orientation   = :vertical
+    ll.layout_width  = :fill_parent
+    ll.layout_height = :fill_parent
+    
+    text_view do |tv|
+      tv.layout_width  = :fill_parent
+      tv.layout_height = :fill_parent
+      tv.text = "Hello World"
+    end
   end
-  layout.add(tv)
 
 end
 
-view_register(ll)
+Main.render
 
 
 =begin
