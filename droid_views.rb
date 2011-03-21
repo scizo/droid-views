@@ -18,8 +18,20 @@ class DroidView
     'text'          => 'text',
     'padding'       => 'padding',
     'id'            => 'id',
+    'layout_align_parent_top'    => 'layout_alignParentTop',
+    'layout_align_parent_bottom' => 'layout_alignParentBottom',
+    'layout_align_parent_left'   => 'layout_alignParentLeft',
+    'layout_align_parent_right'  => 'layout_alignParentLeft',
+    'layout_margin_right' => 'layout_marginRight',
+    'layout_to_right_of'  => 'layout_toRightOf',
+    'layout_align_with_parent_if_missing' => 'layout_alignWithParentIfMissing',
+    'layout_above' => 'layout_above',
+    'single_line'  => 'singleLine',
+    'ellipsize'    => 'ellipsize',
+    'text_color'   => 'textColor',
+    'gravity'      => 'gravity',
   }
-
+  
   CLASS_TYPES.each { |shortcut, actual|
     class_eval "def self.#{shortcut}(&block); create \"#{actual}\", block; end"
   }
