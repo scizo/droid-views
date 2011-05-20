@@ -1,6 +1,6 @@
-require_relative "spec_helper"
+require_relative '../spec_helper'
 
-class Main < DroidView
+class Main < Droid::View
 
   linear_layout do |ll|
     ll.orientation   = :vertical
@@ -30,7 +30,7 @@ correct_xml_for_main = <<-END
 </LinearLayout>
 END
 
-describe 'DroidView#render' do
+describe 'Droid::View#render' do
 
   it "should create correct XML" do
     Main.render.should == correct_xml_for_main
