@@ -52,8 +52,10 @@ class DroidView
   def self.render
     doc = Nokogiri::XML::Document.new
     doc.encoding = "UTF-8"
-    puts @@root.describe(doc)
+    result = @@root.describe(doc)
     @@root = nil
+    puts result
+    result.to_s
   end
 
   def initialize(_name, _parent=nil)
