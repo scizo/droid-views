@@ -6,11 +6,17 @@ class Main < DroidView
     ll.orientation   = :vertical
     ll.layout_width  = :fill_parent
     ll.layout_height = :fill_parent
-    
+
     text_view do |tv|
       tv.layout_width  = :fill_parent
       tv.layout_height = :fill_parent
       tv.text = "Hello World"
+    end
+
+    text_view do |tv|
+      tv.layout_width  = :fill_parent
+      tv.layout_height = :fill_parent
+      tv.text = "Goodbye"
     end
   end
 
@@ -26,10 +32,15 @@ Main.render
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello World, HaggisHead"
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Hello World"
+    />
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Goodbye"
     />
 </LinearLayout>
 =end
